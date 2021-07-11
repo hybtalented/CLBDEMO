@@ -2,10 +2,6 @@ include(./arm-cross-compile.cmake)
 project(RASPBERRYDEMO)
 cmake_minimum_required(VERSION 3.20)
 
-# set(CMAKE_CXX_FLAGS --specs=nosys.specs)
-# set(CMAKE_C_FLAGS --specs=nosys.specs)
-# set(CMAKE_EXE_LINK_FLAGS --specs=nosys.specs)
-
 function(ListDirectory RESULT_TARGET RELATIVE_PATH)
     file(GLOB MODULES_PATH RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${RELATIVE_PATH})
     if(MODULES_PATH)
