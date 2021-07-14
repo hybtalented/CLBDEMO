@@ -28,4 +28,5 @@ message(STATUS ${WIRINGPI_DIR})
 foreach(DEMO_FILE ${DEMOS_PATH})
     add_executable(${DEMO_FILE} "${DEMO_FILE}/${DEMO_FILE}.c")
 endforeach(DEMO_FILE ${DEMOS_PATH})
-install_targets(${DEMOS_PATH})
+
+install(TARGETS ${DEMOS_PATH} DESTINATION .)
