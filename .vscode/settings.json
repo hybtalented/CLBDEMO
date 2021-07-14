@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "*.template": "plaintext",
+        "*.json": "json",
+        "*.qs": "javascript",
+        "*.qdoc": "cpp",
+        "*.doc": "cpp",
+        "*.in": "plaintext",
+        "*.html": "html",
+        "stdio.h": "c",
+        "wiringpi.h": "c"
+    },
+    "C_Cpp.default.includePath": ["${default}", "${WIRINGPI_DIR}/include"]
+}

@@ -1,6 +1,7 @@
 include(./arm-cross-compile.cmake)
 project(RASPBERRYDEMO)
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/bin)
 
 function(ListDirectory RESULT_TARGET RELATIVE_PATH)
     file(GLOB MODULES_PATH RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ${RELATIVE_PATH})
@@ -27,3 +28,4 @@ message(STATUS ${WIRINGPI_DIR})
 foreach(DEMO_FILE ${DEMOS_PATH})
     add_executable(${DEMO_FILE} "${DEMO_FILE}/${DEMO_FILE}.c")
 endforeach(DEMO_FILE ${DEMOS_PATH})
+install_targets(${DEMOS_PATH})
