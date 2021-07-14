@@ -7,8 +7,8 @@
         "*.doc": "cpp",
         "*.in": "plaintext",
         "*.html": "html",
-        "stdio.h": "c",
-        "wiringpi.h": "c"
+        "*.h": "c",
+        "*.c": "c"
     },
     "C_Cpp.default.includePath": ["${default}", "${WIRINGPI_DIR}/include"]
 }
