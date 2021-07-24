@@ -20,13 +20,10 @@ endfunction(ListDirectory)
 
 ListDirectory(DEMOS_PATH */*.c)
 # wiring 位置
-set(WIRINGPI_DIR $ENV{WIRINGPI_DIR})
-include_directories(${WIRINGPI_DIR}/include)
-link_directories(${WIRINGPI_DIR}/lib)
 link_libraries(wiringPi)
 message(STATUS ${WIRINGPI_DIR})
 foreach(DEMO_FILE ${DEMOS_PATH})
     add_executable(${DEMO_FILE} "${DEMO_FILE}/${DEMO_FILE}.c")
 endforeach(DEMO_FILE ${DEMOS_PATH})
-
+set(CMAKE_VERBOSE_MAKEFILE 1)
 install(TARGETS ${DEMOS_PATH} DESTINATION .)
