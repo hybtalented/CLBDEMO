@@ -1,1 +1,1 @@
-scp bin/* pi@192.168.0.110:/home/pi/CLBDEMO/
+scp bin/* pi@192.168.0.105:/home/pi/CLBDEMO/

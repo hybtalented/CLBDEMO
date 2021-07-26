@@ -10,5 +10,5 @@
         "*.h": "c",
         "*.c": "c"
     },
-    "C_Cpp.default.includePath": ["${default}", "${WIRINGPI_DIR}/include"]
+    "C_Cpp.default.includePath": ["${default}", "${RASP_SYSROOT_DIR}/usr/include", "${RASP_SYSROOT_DIR}/usr/include/${ARM_COMPILER_ARCH}"]
 }
