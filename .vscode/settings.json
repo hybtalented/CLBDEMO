@@ -1,14 +1,18 @@
 {
-    "files.associations": {
-        "*.template": "plaintext",
-        "*.json": "json",
-        "*.qs": "javascript",
-        "*.qdoc": "cpp",
-        "*.doc": "cpp",
-        "*.in": "plaintext",
-        "*.html": "html",
-        "*.h": "c",
-        "*.c": "c"
-    },
-    "C_Cpp.default.includePath": ["${default}", "${RASP_SYSROOT_DIR}/usr/include", "${RASP_SYSROOT_DIR}/usr/include/${ARM_COMPILER_ARCH}"]
+  "files.associations": {
+    "*.template": "plaintext",
+    "*.json": "json",
+    "*.qs": "javascript",
+    "*.qdoc": "cpp",
+    "*.doc": "cpp",
+    "*.in": "plaintext",
+    "*.html": "html",
+    "*.h": "c",
+    "*.c": "c"
+  },
+"C_Cpp.default.intelliSenseMode": "linux-gcc-arm",
+"C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+"C_Cpp.vcFormat.indent.caseLabels": true,
+"C_Cpp.vcFormat.indent.braces": true,
+"C_Cpp.vcFormat.indent.accessSpecifiers": true
 }

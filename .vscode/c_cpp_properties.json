@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${default}",
+                "${RASP_SYSROOT_DIR}/usr/include",
+                "${RASP_SYSROOT_DIR}/usr/include/${ARM_COMPILER_ARCH}",
+                "${ARM_COMPILER_PATH}/${ARM_COMPILER_ARCH}/include"
+            ],
+            "defines": [],
+            "compilerPath": "${ARM_COMPILER_PATH}/bin/${ARM_COMPILER_ARCH}-gcc",
+            "configurationProvider": "vector-of-bool.cmake-tools",
+            "compilerArgs": [
+                "-mfloat-abi=hard"
+            ]
+        }
+    ],
+    "version": 4
+}
