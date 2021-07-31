@@ -14,7 +14,7 @@
 
 int main() {
   int value;
-  double Tvr, Trt, T;
+  double Tvr, R, T;
   if (wiringPiSetup() == -1) {
     printf("wiringPi Setup failed");
     return 1;
@@ -27,7 +27,10 @@ int main() {
   while (1) {
     value = analogRead(PCF_PIN + 0);
     Tvr = value / 255.0;
-    T = 1 / (-log(1 / Tvr - 1) / 3950 + 1 / (273.15 + 25));
+    // 电阻计算， 串联电阻为10千欧
+    R = 10000 / (1 / Tvr - 1);
+    // 使用 Steinhart-Hart 方程计算绝对温度
+    T = 1 / (log(R / 10000) / 3950 + 1 / (273.15 + 25));
     T = T - 273.15;
     printf("当前温度为 %lf 摄氏度\n", T);
     delay(200);
