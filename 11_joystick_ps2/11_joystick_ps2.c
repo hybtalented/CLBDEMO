@@ -1,8 +1,8 @@
 /**************************************
- * 文件名 11_joystick_ps2.c
- * 版本 1.0
- * 作者 何友表
- * PS2 操纵杆实验，x 方向表示上（高）下（低），
+ * 文件名: 11_joystick_ps2.c
+ * 版本: 1.0
+ * 作者: 何友表
+ * 说明: PS2 操纵杆实验，x 方向表示上（高）下（低），
  * y 方向表示左（低）右（高）
  *************************************/
 #include <math.h>
@@ -29,7 +29,6 @@ int main() {
     printf("wiringPi pcf8591 Setup PIN %d failed", PCF_PIN);
     return 1;
   }
-  pinMode(PS_SW_PIN, INPUT);
   while (1) {
     x_value = analogRead(PS_X_PIN);
     y_value = analogRead(PS_Y_PIN);
