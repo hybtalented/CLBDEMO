@@ -20,7 +20,7 @@ endfunction(ListDirectory)
 
 ListDirectory(DEMOS_PATH */*.c)
 # wiring 位置
-link_libraries(wiringPi m)
+link_libraries(wiringPi m lirc_client)
 message(STATUS ${WIRINGPI_DIR})
 foreach(DEMO_FILE ${DEMOS_PATH})
     add_executable(${DEMO_FILE} "${DEMO_FILE}/${DEMO_FILE}.c")
