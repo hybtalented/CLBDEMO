@@ -20,7 +20,7 @@ endfunction(ListDirectory)
 
 ListDirectory(DEMOS_PATH */*.c)
 # wiring 位置
-link_libraries(wiringPi m lirc_client i2c)
+link_libraries(wiringPi wiringPiDev m lirc_client i2c)
 message(STATUS ${WIRINGPI_DIR})
 list(REMOVE_DUPLICATES  DEMOS_PATH)
 foreach(DEMO_FILE ${DEMOS_PATH})
