@@ -1,2 +1,3 @@
-IP_ADDRESS=192.168.0.110
-rsync -avz --rsync-path="sudo rsync" --delete bin/ pi@$IP_ADDRESS:/home/pi/CLBDEMO
+IP_ADDRESS=192.168.1.21
+USER_NAME=ubuntu
+rsync -avz --rsync-path="sudo rsync" --delete bin/ ${USER_NAME}@$IP_ADDRESS:/home/${USER_NAME}/CLBDEMO

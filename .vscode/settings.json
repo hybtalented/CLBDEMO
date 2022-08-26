@@ -14,5 +14,7 @@
 "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
 "C_Cpp.vcFormat.indent.caseLabels": true,
 "C_Cpp.vcFormat.indent.braces": true,
-"C_Cpp.vcFormat.indent.accessSpecifiers": true
+"C_Cpp.vcFormat.indent.accessSpecifiers": true,
+"ros.distro": "rolling",
+"cmake.buildArguments": "--toolchain arm-cross-compile.cmake"
 }
